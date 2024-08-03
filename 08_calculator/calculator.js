@@ -7,20 +7,11 @@ const subtract = function(num1, num2) {
 };
 
 const sum = function(numbers) {
-	let total = 0;
-  for (let i = 0; i < numbers.length; i++){
-    total += numbers[i];
-    console.log(total);
-  }
-  return total;
+  return numbers.reduce((total, currentItem) => total+currentItem, 0)
 };
 
 const multiply = function(numbers) {
-  let total = 1;
-  for (let i = 0; i < numbers.length; i++){
-    total = total * numbers[i];
-  }
-  return total;
+  return numbers.reduce((total, currentItem) => total*currentItem, 1)
 };
 
 const power = function(number, expoent) {
